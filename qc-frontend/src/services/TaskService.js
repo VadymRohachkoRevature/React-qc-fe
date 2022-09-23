@@ -1,11 +1,9 @@
-import "./App.css";
-import GetTasks from "./services/TaskService";
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function App() {
- 	const [tasks, setTasks] = useState('');
+const GetTasks = () => {
+
+ 	const [tasks, setTasks] = useState();
 
 	const basePath = 'http://localhost:5000/qc';
 
@@ -19,13 +17,14 @@ function App() {
     })
   }, []); 
 
-	return (
-		<div>
-			<p>{tasks.taskId}</p>
-			<GetTasks />
-			</div>
-  );
+  return (
+      <div>
+      <p>{tasks.taskId}</p>
+      <p>{tasks.question}</p>
+      <p>{tasks.answer}</p>
+    </div>
+  )  ;
+  
 }
 
-export default App;
-
+export default GetTasks;
