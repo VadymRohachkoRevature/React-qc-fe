@@ -1,5 +1,5 @@
 import "./App.css";
-import GetTasks from "./services/TaskService";
+import { GetTasks } from "./services/TaskService";
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
