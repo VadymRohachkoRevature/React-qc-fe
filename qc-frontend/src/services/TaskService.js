@@ -7,6 +7,7 @@ export async function GetTasks() {
 
 	const basePath = 'http://localhost:5000/qc';
 
+  /**/
   useEffect(() => {
     axios.get(basePath+'/tasks/1')
     .then(function (response) {
